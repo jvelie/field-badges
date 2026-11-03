@@ -1,0 +1,90 @@
+{
+  "name": "field-badges",
+  "version": "0.1.0",
+  "description": "Forty-four hand-drawn pin badges for memorable moments of real work (a rebase that went through, tests gone green, a workflow back home), each earned once ever and kept in a badge book beside the chat, with an original ladder of workshop titles. Looks only: it never changes what the model sees or does.",
+  "author": {
+    "name": "jvelie"
+  },
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "badges": {
+      "type": "boolean",
+      "title": "Award badges",
+      "description": "Master switch. Off: nothing is recorded or drawn and /badges is not registered. Badges already earned stay in the mod's store.",
+      "default": true
+    },
+    "toasts": {
+      "type": "boolean",
+      "title": "Unlock toasts",
+      "description": "A 5 s toast when a badge unlocks: at most one every 5 minutes, unlocks that arrive together merged into one.",
+      "default": true
+    },
+    "pinDrops": {
+      "type": "boolean",
+      "title": "Pin drops and title plaques",
+      "description": "Desktop: a pin drops into the band above the prompt for 5 s when a badge unlocks, and a brass plaque shows a new workshop title for 8 s, at most once a day.",
+      "default": true
+    },
+    "footerButton": {
+      "type": "boolean",
+      "title": "Footer badge book icon",
+      "description": "Desktop: one small pressable badge icon at the right end of the prompt footer, after the other labels; pressing it opens the badge book. It takes the place of the footer count there.",
+      "default": true
+    },
+    "footerIcon": {
+      "type": "string",
+      "title": "Footer icon",
+      "description": "The character the footer button shows, alone (no count, no words). A medal by default; for example ◆ for a quieter diamond.",
+      "default": "🏅"
+    },
+    "footerLabel": {
+      "type": "boolean",
+      "title": "Footer count",
+      "description": "Terminal, and the Desktop when the footer icon is off: show the badge count as one footer label (a diamond and a number) once the first badge is earned.",
+      "default": true
+    },
+    "command": {
+      "type": "boolean",
+      "title": "/badges command",
+      "description": "Register /badges, which opens the badge book. Its reply is empty, but the typed command line is kept in the conversation like any slash command.",
+      "default": true
+    },
+    "hiddenHints": {
+      "type": "boolean",
+      "title": "Hints for hidden badges",
+      "description": "Show hidden badges (and the Oddities) as grey silhouettes with their hint instead of a question mark.",
+      "default": false
+    },
+    "oddities": {
+      "type": "boolean",
+      "title": "Oddities chapter",
+      "description": "Error flavours (ENOENT Eclair, Merge-Conflict Crumble and ten more), each discovered once ever. Refusals at the permission card never count.",
+      "default": true
+    },
+    "kindledDays": {
+      "type": "boolean",
+      "title": "Kindled Days chapter",
+      "description": "Quietly records the days something shipped (a commit, a push, a pull request opened or merged), with best-run badges. No unlit state, no countdown, no reminder.",
+      "default": true
+    },
+    "quiet": {
+      "type": "boolean",
+      "title": "Quiet",
+      "description": "No toasts, pin drops or plaques; badges are still earned, counted and kept in the book. The book's Hush button does the same without a reload.",
+      "default": false
+    },
+    "workdays": {
+      "type": "string",
+      "title": "Workdays",
+      "description": "The days Clocked In counts and Kindled Days runs step over, as day names (Mon,Tue,Wed,Thu,Fri) or a range (Mon-Fri). A day off never breaks a run.",
+      "default": "Mon,Tue,Wed,Thu,Fri"
+    },
+    "utcOffset": {
+      "type": "string",
+      "title": "Clock offset",
+      "description": "'local' uses the clock the hooks see; a fixed offset such as +01:00 or -05:00 sets the day and time for the book's dates, workdays and Kindled Days.",
+      "default": "local"
+    }
+  }
+}

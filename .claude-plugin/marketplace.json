@@ -1,0 +1,5 @@
+{
+  "name": "field-badges",
+  "owner": { "name": "jvelie" },
+  "plugins": [{ "name": "field-badges", "source": "./" }]
+}
